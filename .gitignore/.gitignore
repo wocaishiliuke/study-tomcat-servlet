@@ -1,19 +1,22 @@
-# Intellij
+## Intellij
 .idea/
 *.iml
 out
 gen
 
-# Mac
+## Mac
 .DS_Store
 
-# Maven
+## Maven
 log/
 logs/
 target/
 
-# Eclipse
+## Eclipse
 lib
+WebContent/WEB-INF/lib/
+#eclipse默认编译路径是build/，有时改成WebContent/WEB-INF/classes/，这里直接过滤class文件
+*.class
 .settings/
 .classpath
 .project
