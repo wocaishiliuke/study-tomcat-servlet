@@ -4,12 +4,48 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
+  
+  <!-- servletContext中的参数 -->
+  <context-param>
+  	<param-name>servletContextHero1</param-name>
+  	<param-value>黄菜饼</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>servletContextHero2</param-name>
+  	<param-value>紫菜饼</param-value>
+  </context-param>
+  
+  <!-- 测试自定义的servlet -->
   <servlet>
-    <servlet-name>MyServletTest</servlet-name>
-    <servlet-class>com.study.servlet.MyServletTest</servlet-class>
+    <servlet-name>myServlet</servlet-name>
+    <servlet-class>com.study.servlet.MyServlet</servlet-class>
+    <!-- Container启动时就创建并init该servlet -->
+    <!-- <load-on-startup>1</load-on-startup> -->
   </servlet>
   <servlet-mapping>
-    <servlet-name>MyServletTest</servlet-name>
-    <url-pattern>/MyServletTest/*</url-pattern>
+    <servlet-name>myServlet</servlet-name>
+    <url-pattern>/myServlet/*</url-pattern>
   </servlet-mapping>
+  
+  <!-- 测试servletConfig -->
+  <servlet>
+  	<!-- 注意各标签有先后顺序 -->
+  	<servlet-name>servletConfigTest</servlet-name>
+  	<servlet-class>com.study.servlet.ServletConfigTest</servlet-class>
+  	<!-- servletConfig中的参数 -->
+  	<init-param>
+  		<param-name>hero1</param-name>
+  		<param-value>白菜饼1</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>hero2</param-name>
+  		<param-value>白菜饼2</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>servletConfigTest</servlet-name>
+  	<url-pattern>/servletConfigTest</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

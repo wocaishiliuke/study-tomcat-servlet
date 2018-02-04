@@ -10,16 +10,18 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 使用Eclipse自动生成的Servlet; 使用@WebServlet完成该servlet的注册
+ * @author zhouyu
+ * @date 2018年2月3日 下午4:46:32
+ * 测试路径：http://localhost:8080/study09_tomcat-servlet/eclipseServlet
  */
-//测试路径：http://localhost:8080/study09/EclipseServletTest
-@WebServlet(description = "测试Eclipse生成servlet模板", urlPatterns = { "/EclipseServletTest" })
-public class EclipseServletTest extends HttpServlet {
+@WebServlet(description = "测试Eclipse生成servlet模板", urlPatterns = { "/eclipseServlet" })
+public class EclipseServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EclipseServletTest() {
+    public EclipseServlet() {
         super();
         // TODO Auto-generated constructor stub
     }

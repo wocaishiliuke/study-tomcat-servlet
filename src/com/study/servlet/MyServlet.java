@@ -6,9 +6,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+/**
+ * 使用web.xml配置servlet,处理乱码
+ * @author zhouyu
+ * @date 2018年2月3日 下午4:46:10
+ * 测试路径：http://localhost:8080/study09_tomcat-servlet/myServlet/*
+ */
 @SuppressWarnings("all")
-public class MyServletTest extends HttpServlet {
+public class MyServlet extends HttpServlet {
 	
 	//处理get请求：1.form的method="get"; 2.a标签; 3.浏览器直接访问; 4.img的src
 	@Override
