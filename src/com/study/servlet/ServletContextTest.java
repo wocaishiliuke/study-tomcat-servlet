@@ -69,10 +69,10 @@ public class ServletContextTest extends HttpServlet {
 		context.setAttribute("count", count);
 		
 		//4.读取资源文件
-		//String aPath = context.getRealPath("/build/classes/a.txt");//有时IDE会编译到/WebContent/WEB-INF/classes下
-		String aPath = context.getRealPath("/WebContent/WEB-INF/classes/a.txt");//有时IDE会编译到/WebContent/WEB-INF/classes下
+		//这里没有/WebContent,发布到Tomcat后会改成项目名
+		String aPath = context.getRealPath("/WEB-INF/classes/a.txt");//有时IDE会编译到/build/classes下，但发布的时候还是会拷贝到/WEB-INF/classes下
 		String bPath = context.getRealPath("/b.txt");
-		String cPath = context.getRealPath("/WebContent/WEB-INF/c.txt");
+		String cPath = context.getRealPath("/WEB-INF/c.txt");
 		//System.out.println("项目路径为：" + req.getContextPath());//方式1
 		System.out.println("项目路径为：" + context.getContextPath());
 		System.out.println("a.txt的硬盘(真实)路径为===>" + aPath);
