@@ -38,7 +38,7 @@ public class ServletContextTest extends HttpServlet {
 		//Enumeration<String> configParameterNames = this.getServletConfig().getInitParameterNames();
 		Enumeration<String> configParameterNames = this.getInitParameterNames();
 		while (configParameterNames.hasMoreElements()) {
-			String configParameterName = (String) configParameterNames.nextElement();
+			String configParameterName = configParameterNames.nextElement();
 			String configParameterValue = this.getInitParameter(configParameterName);
 			System.out.println("servletConfig中的参数：" + configParameterName + " = " + configParameterValue);
 		}
@@ -48,7 +48,7 @@ public class ServletContextTest extends HttpServlet {
 		ServletContext context = this.getServletContext();//方式2
 		Enumeration<String> contextParameterNames = context.getInitParameterNames();
 		while (contextParameterNames.hasMoreElements()) {
-			String contextParameterName = (String) contextParameterNames.nextElement();
+			String contextParameterName = contextParameterNames.nextElement();
 			String contextParameterValue = context.getInitParameter(contextParameterName);
 			System.out.println("servletContext中的参数：" + contextParameterName + " = " + contextParameterValue);
 		}

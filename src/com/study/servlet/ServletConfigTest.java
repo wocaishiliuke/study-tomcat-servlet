@@ -26,7 +26,7 @@ public class ServletConfigTest extends HttpServlet {
 		//System.out.println("key = hero1" + "; value = " + config.getInitParameter("hero1"));
 		Enumeration<String> names = config.getInitParameterNames();
 		while (names.hasMoreElements()) {
-			String name = (String) names.nextElement();
+			String name = names.nextElement();
 			String value = config.getInitParameter(name);
 			System.out.println("name = " + name + "; value = " + value);
 		}
